@@ -1,0 +1,110 @@
+{
+  "name": "Habit Reminder Bot",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 13
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "d6070f82-9cc8-42b3-8212-5cd38bf08cca",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "735e6bd1-8681-485c-91b8-5693fdc08751",
+              "name": "message",
+              "value": "=📅 Daily Habit Reminder  \nToday's Habits  \n📚 Study for 1 hour  \n💧 Drink 8 glasses of water  \n🏃 Exercise for 30 minutes  \n📖 Read 20 pages  \n🧘 Meditate for 10 minutes  \n📅 Date: {{$now.format('MMMM dd, yyyy')}}  \n💪 Small progress every day leads to big results.  \n🤖 Generated automatically with n8n.",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "4cc45955-9c32-4946-ba28-004800ba7a35",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "chatId": "5518864435",
+        "text": "={{ $json.message }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        416,
+        0
+      ],
+      "id": "f9827106-1f2f-443c-85de-0f0cbad7d64b",
+      "name": "Send a text message",
+      "webhookId": "266baa54-1a20-41e9-99a4-00269fee67aa",
+      "credentials": {
+        "telegramApi": {
+          "id": "fAE94OGuEzI6AIc2",
+          "name": "Habit Reminder Bot"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "timeSavedMode": "fixed",
+    "timezone": "Asia/Manila",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "versionId": "d67090ae-2221-4c9c-a89b-0523905fccef",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8109642ab6846a9cf1618de304921f5663481ec8cdaee6a52dd360d6de75a743"
+  },
+  "id": "cfydOX1C9NHeVGR1",
+  "tags": []
+}
