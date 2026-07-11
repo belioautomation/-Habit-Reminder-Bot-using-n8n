@@ -1,32 +1,23 @@
 # 📅 Habit Reminder Bot using n8n
 
-An automated workflow built with **n8n** that sends a daily habit reminder directly to **Telegram**. This project demonstrates scheduled automation, message formatting, and Telegram bot integration without requiring any external APIs or paid services.
+An automated reminder workflow built with **n8n** that sends a personalized daily habit checklist directly to **Telegram**. This workflow demonstrates scheduled automation, message formatting, and Telegram bot integration without requiring external APIs or paid services.
+
+Built as part of my **30-Day n8n Automation Portfolio**, this project showcases workflow automation for personal productivity and daily habit tracking.
 
 ---
 
-## 📌 Overview
+## 📌 Features
 
-This workflow automatically performs the following tasks:
-
-- Runs every day at a scheduled time.
-- Generates a personalized habit reminder.
-- Includes the current date in the message.
-- Sends the reminder directly to Telegram.
-
----
-
-## 🚀 Features
-
-- ⏰ Daily scheduled execution
-- 📋 Daily habit checklist
-- 📲 Telegram notification
-- 📅 Automatically displays the current date
-- 🔑 No API key required
-- 💯 Fully automated
+- ⏰ Runs automatically on a daily schedule
+- 📋 Sends a personalized habit checklist
+- 📅 Displays the current date automatically
+- 📲 Delivers reminders directly to Telegram
+- 🆓 No external API required
+- ⚡ Fully automated workflow
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Technologies Used
 
 - n8n
 - Schedule Trigger
@@ -53,17 +44,17 @@ Telegram
 
 ### 1. Schedule Trigger
 
-Automatically starts the workflow every day at the configured time.
+Automatically starts the workflow at a scheduled time each day.
 
 ---
 
 ### 2. Edit Fields (Set)
 
-Creates a formatted daily habit reminder message using expressions.
+Creates a formatted habit reminder message using n8n expressions.
 
 Example Output:
 
-```
+```text
 📅 Daily Habit Reminder
 
 Today's Habits
@@ -83,7 +74,7 @@ July 02, 2026
 
 💪 Small progress every day leads to big results.
 
-🤖 Generated automatically with n8n.
+🤖 Generated automatically using n8n.
 ```
 
 ---
@@ -94,94 +85,70 @@ Sends the formatted habit reminder directly to your Telegram account.
 
 ---
 
-## 📁 Project Structure
+## 📁 Repository Structure
 
-```
+```text
 Habit-Reminder-Bot/
 │
 ├── README.md
 ├── workflow.json
-└── screenshots/
-    ├── workflow.png
-    ├── workflow-execution.png
-    └── telegram-output.png
+│
+├── screenshots/
+│   ├── workflow.png
+│   ├── workflow-execution.png
+│   └── telegram-output.png
 ```
 
 ---
 
-## 📸 Screenshots
+## 📷 Screenshots
 
 Include the following screenshots:
 
-- Workflow Editor
-- Successful Workflow Execution
+- Complete Workflow
+- Workflow Execution
 - Telegram Output
 
-Example:
-
-```
-screenshots/
-    workflow.png
-    workflow-execution.png
-    telegram-output.png
-```
-
 ---
 
-## 💡 Use Cases
+## 🎯 Learning Objectives
 
-- Daily study reminders
-- Fitness and workout reminders
-- Reading goals
-- Hydration tracking
-- Meditation reminders
-- Personal productivity
-- Portfolio automation project
+This project demonstrates:
 
----
-
-## 🔮 Future Improvements
-
-- Store habits in Google Sheets
-- Send different reminders on weekdays and weekends
-- Add habit completion tracking
-- Send reminders multiple times a day
-- Allow users to customize their habit list
-- Integrate with Google Calendar
-- Generate weekly habit reports
-
----
-
-## 📚 What I Learned
-
-This project helped me gain hands-on experience with:
-
-- Workflow automation using n8n
-- Schedule Trigger node
-- Edit Fields (Set) node
-- Expressions
-- Telegram Bot integration
-- Scheduled workflows
-
----
-
-## 🏷 Skills Demonstrated
-
-- n8n
-- Workflow Automation
-- Schedule Trigger
-- Edit Fields (Set)
-- Expressions
-- Telegram Bot API
-- Scheduled Automation
+- Scheduled Workflow Automation
+- Telegram Bot Integration
+- Message Formatting
+- n8n Expressions
+- Personal Productivity Automation
 - No-Code / Low-Code Development
 
 ---
 
-## 📄 License
+## 🚀 Future Improvements
+
+- Store habits in Google Sheets
+- Support different reminders for weekdays and weekends
+- Habit completion tracking
+- Multiple reminders throughout the day
+- Customizable habit lists
+- Google Calendar integration
+- Weekly habit reports
+
+---
+
+## 📜 License
 
 This project is licensed under the MIT License.
 
 ---
 
-⭐ If you found this project helpful, consider giving it a star!
+## 👨‍💻 Author
+
+**Belio C. Sinangote**
+
+BS Information Technology Student  
+Cebu Technological University (CTU)
+
+**GitHub:** https://github.com/belioautomation
+
+This project is part of my **30-Day n8n Automation Portfolio**, showcasing practical workflow automation using **n8n**, **Telegram Bot API**, and **scheduled workflows**.
